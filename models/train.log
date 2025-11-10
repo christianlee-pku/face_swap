@@ -1,0 +1,12 @@
+[2025-11-08 14:54:25] INFO: ==== Environment ====
+[2025-11-08 14:54:25] INFO: PyTorch 2.2.2 | TorchVision 0.17.2 | CUDA=False
+[2025-11-08 14:54:25] INFO: Seed=42 | Device=cpu
+[2025-11-08 14:54:25] INFO: ==== HParams ====
+[2025-11-08 14:54:25] INFO: train_csv=data/metadata/sample_pairs_train.csv | val_csv=(none) | batch_size=8 | lr=0.0002 | workers=2 | w_id=1.0 w_perc=0.2 w_l1_face=0.2 w_l1_bg=1.0 | base=24 id_dim=128 width_id=1.0
+[2025-11-08 14:54:25] INFO: stageA_epochs=2 same_only=True | stageB_epochs=1 | grad_clip=0.0 | log_interval=10 | log_grad_norm=False
+[2025-11-08 14:54:25] INFO: Logs -> models/train.log | Outputs -> models
+[2025-11-08 14:54:25] INFO: [A] Data prepared: train=47 samples, val=0 samples, batch_size=8
+[2025-11-08 14:54:25] INFO: [A] IDEncoderMobile params: 33,664
+[2025-11-08 14:54:25] INFO: [A] MobileSwapLite params: 130,932
+[2025-11-08 14:54:26] INFO: [A] ===== Epoch 1/2 START =====
+[2025-11-08 14:54:26] INFO: [A] LR = 0.000200 | grad_clip = 0.0 | device = cpu

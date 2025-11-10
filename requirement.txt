@@ -1,0 +1,25 @@
+# --- Core numeric stack  ---
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+scikit-learn==1.4.2
+
+# --- PyTorch stack ---
+torch==2.2.2
+torchvision==0.17.2
+facenet-pytorch==2.6.0
+
+# --- CV / imaging ---
+opencv-python==4.10.0.84
+Pillow==10.4.0
+
+# --- API service ---
+fastapi==0.121.0
+uvicorn==0.38.0
+pydantic==2.12.4
+pydantic-settings==2.0.3
+python-multipart==0.0.9
+typing-extensions>=4.8,<5
+
+# --- CLI niceties ---
+tqdm==4.66.5
