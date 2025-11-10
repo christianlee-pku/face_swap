@@ -1,0 +1,216 @@
+[2025-11-08 19:22:25] INFO: ==== Environment ====
+[2025-11-08 19:22:25] INFO: PyTorch 2.2.2 | TorchVision 0.17.2 | CUDA=False
+[2025-11-08 19:22:25] INFO: Seed=42 | Device=cpu
+[2025-11-08 19:22:25] INFO: ==== HParams ====
+[2025-11-08 19:22:25] INFO: train_csv=data/metadata/pairs_val.csv | val_csv=data/metadata/sample_pairs_train.csv | batch_size=4 | lr=0.0002 | workers=2 | w_id=1.0 w_perc=0.3 w_l1_face=0.4 w_l1_bg=1.0 | base=24 id_dim=128 width_id=1.0
+[2025-11-08 19:22:25] INFO: stageA_epochs=3 same_only=True | stageB_epochs=2 | grad_clip=0.0 | log_interval=10 | log_grad_norm=False
+[2025-11-08 19:22:25] INFO: Logs -> ckpts/train.log | Outputs -> ckpts
+[2025-11-08 19:22:25] INFO: [A] Data prepared: train=1035 samples, val=47 samples, batch_size=4
+[2025-11-08 19:22:25] INFO: [A] Saved fixed IDEncoder -> ckpts/id_encoder_fixed.pt
+[2025-11-08 19:22:25] INFO: [A] IDEncoderMobile params: 33,664
+[2025-11-08 19:22:25] INFO: [A] MobileSwapLite params: 130,932
+[2025-11-08 19:22:25] INFO: [A] ===== Epoch 1/3 START =====
+[2025-11-08 19:22:25] INFO: [A] LR = 0.000200 | grad_clip = 0.0 | device = cpu
+[2025-11-08 19:22:55] INFO: [A] ep 001 | batch 0010/0259 | data 0.9 ms | iter 1906.6 ms | lr 0.000200 | loss: total=4.5948 id=0.0000 perc=13.7368 l1f=0.4609 l1bg=0.2894 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:23:14] INFO: [A] ep 001 | batch 0020/0259 | data 0.6 ms | iter 1899.0 ms | lr 0.000200 | loss: total=4.3169 id=0.0000 perc=13.2457 l1f=0.3575 l1bg=0.2002 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:23:33] INFO: [A] ep 001 | batch 0030/0259 | data 0.6 ms | iter 1932.5 ms | lr 0.000200 | loss: total=4.1414 id=-0.0000 perc=12.8413 l1f=0.2899 l1bg=0.1731 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:23:52] INFO: [A] ep 001 | batch 0040/0259 | data 0.7 ms | iter 1881.2 ms | lr 0.000200 | loss: total=3.8346 id=-0.0000 perc=11.8367 l1f=0.3114 l1bg=0.1591 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:24:12] INFO: [A] ep 001 | batch 0050/0259 | data 0.6 ms | iter 1886.8 ms | lr 0.000200 | loss: total=3.7441 id=0.0000 perc=11.5787 l1f=0.3230 l1bg=0.1413 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:24:31] INFO: [A] ep 001 | batch 0060/0259 | data 0.7 ms | iter 1879.1 ms | lr 0.000200 | loss: total=3.5982 id=0.0000 perc=11.2746 l1f=0.2115 l1bg=0.1312 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:24:50] INFO: [A] ep 001 | batch 0070/0259 | data 0.7 ms | iter 1894.9 ms | lr 0.000200 | loss: total=3.4078 id=-0.0000 perc=10.7085 l1f=0.2115 l1bg=0.1107 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:25:09] INFO: [A] ep 001 | batch 0080/0259 | data 0.6 ms | iter 1948.4 ms | lr 0.000200 | loss: total=3.2802 id=0.0000 perc=10.2395 l1f=0.2441 l1bg=0.1106 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:25:29] INFO: [A] ep 001 | batch 0090/0259 | data 0.7 ms | iter 1891.6 ms | lr 0.000200 | loss: total=3.2038 id=0.0000 perc=10.0574 l1f=0.1706 l1bg=0.1183 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:25:48] INFO: [A] ep 001 | batch 0100/0259 | data 0.6 ms | iter 1895.7 ms | lr 0.000200 | loss: total=3.0726 id=0.0000 perc=9.6365 l1f=0.1766 l1bg=0.1110 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:26:08] INFO: [A] ep 001 | batch 0110/0259 | data 0.6 ms | iter 2091.1 ms | lr 0.000200 | loss: total=2.9267 id=0.0000 perc=9.1497 l1f=0.1934 l1bg=0.1044 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:26:28] INFO: [A] ep 001 | batch 0120/0259 | data 0.7 ms | iter 1883.0 ms | lr 0.000200 | loss: total=2.9382 id=0.0000 perc=8.9727 l1f=0.2686 l1bg=0.1389 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:26:47] INFO: [A] ep 001 | batch 0130/0259 | data 0.6 ms | iter 1881.9 ms | lr 0.000200 | loss: total=2.8244 id=0.0000 perc=8.8921 l1f=0.1755 l1bg=0.0866 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:27:06] INFO: [A] ep 001 | batch 0140/0259 | data 0.7 ms | iter 1896.0 ms | lr 0.000200 | loss: total=2.6384 id=0.0000 perc=8.3822 l1f=0.1341 l1bg=0.0701 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:27:25] INFO: [A] ep 001 | batch 0150/0259 | data 0.7 ms | iter 1924.4 ms | lr 0.000200 | loss: total=2.9017 id=0.0000 perc=8.2608 l1f=0.4631 l1bg=0.2382 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:27:44] INFO: [A] ep 001 | batch 0160/0259 | data 0.7 ms | iter 1909.7 ms | lr 0.000200 | loss: total=2.6645 id=0.0000 perc=8.1234 l1f=0.2414 l1bg=0.1309 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:28:07] INFO: [A] ep 001 | batch 0170/0259 | data 0.6 ms | iter 1894.6 ms | lr 0.000200 | loss: total=2.4723 id=-0.0000 perc=7.7878 l1f=0.1471 l1bg=0.0771 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:28:28] INFO: [A] ep 001 | batch 0180/0259 | data 0.8 ms | iter 1902.2 ms | lr 0.000200 | loss: total=2.4965 id=-0.0000 perc=7.8517 l1f=0.1549 l1bg=0.0790 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:28:47] INFO: [A] ep 001 | batch 0190/0259 | data 0.6 ms | iter 1949.6 ms | lr 0.000200 | loss: total=2.5003 id=0.0000 perc=7.6820 l1f=0.2295 l1bg=0.1039 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:29:06] INFO: [A] ep 001 | batch 0200/0259 | data 0.7 ms | iter 1895.7 ms | lr 0.000200 | loss: total=2.3589 id=0.0000 perc=7.4527 l1f=0.1285 l1bg=0.0717 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:39:42] INFO: [A] ep 001 | batch 0210/0259 | data 0.7 ms | iter 1961.9 ms | lr 0.000200 | loss: total=2.1481 id=-0.0000 perc=6.6925 l1f=0.1398 l1bg=0.0844 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:40:04] INFO: [A] ep 001 | batch 0220/0259 | data 0.6 ms | iter 1958.5 ms | lr 0.000200 | loss: total=2.2285 id=0.0000 perc=7.0711 l1f=0.1120 l1bg=0.0624 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:40:23] INFO: [A] ep 001 | batch 0230/0259 | data 0.7 ms | iter 1879.7 ms | lr 0.000200 | loss: total=2.1712 id=0.0000 perc=6.6158 l1f=0.2073 l1bg=0.1035 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:40:42] INFO: [A] ep 001 | batch 0240/0259 | data 0.6 ms | iter 1873.2 ms | lr 0.000200 | loss: total=2.1343 id=0.0000 perc=6.7441 l1f=0.1109 l1bg=0.0667 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:41:01] INFO: [A] ep 001 | batch 0250/0259 | data 0.7 ms | iter 1885.5 ms | lr 0.000200 | loss: total=2.1715 id=0.0000 perc=6.7943 l1f=0.1385 l1bg=0.0778 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:41:18] INFO: [A] ep 001 | batch 0259/0259 | data 0.6 ms | iter 1435.8 ms | lr 0.000200 | loss: total=2.2707 id=0.0000 perc=6.8962 l1f=0.2051 l1bg=0.1198 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:41:28] INFO: [A] Train@Epoch1: g=3.0186 id=-0.0000 perc=9.3433 l1f=0.2233 l1bg=0.1263 | time=1142.6s
+[2025-11-08 19:41:37] INFO: [A] ep 001 | batch 0005/0012 | data 0.7 ms | iter 778.6 ms | lr 0.000000 | loss: total=2.0709 id=-0.0000 perc=6.6190 l1f=0.0982 l1bg=0.0459 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:41:41] INFO: [A] ep 001 | batch 0010/0012 | data 0.7 ms | iter 772.2 ms | lr 0.000000 | loss: total=1.8883 id=0.0000 perc=6.0330 l1f=0.0920 l1bg=0.0416 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:41:42] INFO: [A] ep 001 | batch 0012/0012 | data 0.6 ms | iter 600.4 ms | lr 0.000000 | loss: total=1.9959 id=0.0000 perc=6.3704 l1f=0.0886 l1bg=0.0493 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:41:52] INFO: [A] Val@Epoch1:   g=2.0535 id=-0.0000 perc=6.5204 l1f=0.0957 l1bg=0.0591 | time=24.6s
+[2025-11-08 19:41:52] INFO: [A] Checkpoint saved -> ckpts/gen_A_ep1.pt
+[2025-11-08 19:41:52] INFO: [A] New BEST (val id=-0.0000) -> ckpts/gen_A_best.pt
+[2025-11-08 19:41:54] INFO: [A] ===== Epoch 1/3 END =====
+[2025-11-08 19:41:54] INFO: [A] ===== Epoch 2/3 START =====
+[2025-11-08 19:41:54] INFO: [A] LR = 0.000200 | grad_clip = 0.0 | device = cpu
+[2025-11-08 19:42:17] INFO: [A] ep 002 | batch 0010/0259 | data 0.9 ms | iter 1852.6 ms | lr 0.000200 | loss: total=2.2061 id=0.0000 perc=6.8073 l1f=0.1939 l1bg=0.0864 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:42:35] INFO: [A] ep 002 | batch 0020/0259 | data 0.7 ms | iter 1859.9 ms | lr 0.000200 | loss: total=2.1963 id=0.0000 perc=6.8502 l1f=0.1415 l1bg=0.0846 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:42:54] INFO: [A] ep 002 | batch 0030/0259 | data 0.6 ms | iter 1847.6 ms | lr 0.000200 | loss: total=2.0281 id=0.0000 perc=6.3599 l1f=0.1139 l1bg=0.0746 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:43:13] INFO: [A] ep 002 | batch 0040/0259 | data 0.6 ms | iter 1843.3 ms | lr 0.000200 | loss: total=2.0540 id=-0.0000 perc=6.3650 l1f=0.1432 l1bg=0.0872 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:43:32] INFO: [A] ep 002 | batch 0050/0259 | data 0.7 ms | iter 1862.9 ms | lr 0.000200 | loss: total=2.0420 id=0.0000 perc=6.3581 l1f=0.1166 l1bg=0.0880 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:43:50] INFO: [A] ep 002 | batch 0060/0259 | data 0.7 ms | iter 1915.3 ms | lr 0.000200 | loss: total=2.0259 id=0.0000 perc=6.1579 l1f=0.1751 l1bg=0.1085 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:44:09] INFO: [A] ep 002 | batch 0070/0259 | data 0.7 ms | iter 1843.8 ms | lr 0.000200 | loss: total=2.1152 id=0.0000 perc=6.3601 l1f=0.2686 l1bg=0.0997 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:44:28] INFO: [A] ep 002 | batch 0080/0259 | data 0.7 ms | iter 1868.7 ms | lr 0.000200 | loss: total=2.0075 id=0.0000 perc=6.0505 l1f=0.1987 l1bg=0.1128 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:44:46] INFO: [A] ep 002 | batch 0090/0259 | data 0.7 ms | iter 1845.9 ms | lr 0.000200 | loss: total=1.9990 id=0.0000 perc=6.1091 l1f=0.2020 l1bg=0.0855 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:45:07] INFO: [A] ep 002 | batch 0100/0259 | data 1.0 ms | iter 2104.9 ms | lr 0.000200 | loss: total=1.9028 id=0.0000 perc=5.8766 l1f=0.1444 l1bg=0.0820 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:45:27] INFO: [A] ep 002 | batch 0110/0259 | data 0.7 ms | iter 1879.2 ms | lr 0.000200 | loss: total=1.8169 id=0.0000 perc=5.6683 l1f=0.1094 l1bg=0.0726 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:45:49] INFO: [A] ep 002 | batch 0120/0259 | data 0.7 ms | iter 1923.5 ms | lr 0.000200 | loss: total=2.0600 id=-0.0000 perc=6.1582 l1f=0.2203 l1bg=0.1244 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 19:46:08] INFO: [A] ep 002 | batch 0130/0259 | data 0.7 ms | iter 1852.7 ms | lr 0.000200 | loss: total=2.0918 id=0.0000 perc=5.9772 l1f=0.3126 l1bg=0.1735 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:05:29] INFO: [A] ep 002 | batch 0140/0259 | data 0.7 ms | iter 2105.0 ms | lr 0.000200 | loss: total=1.8670 id=0.0000 perc=5.8160 l1f=0.1342 l1bg=0.0686 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:06:01] INFO: [A] ep 002 | batch 0150/0259 | data 0.6 ms | iter 2031.2 ms | lr 0.000200 | loss: total=2.0139 id=0.0000 perc=6.0911 l1f=0.1709 l1bg=0.1182 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:06:44] INFO: [A] ep 002 | batch 0160/0259 | data 0.7 ms | iter 1972.4 ms | lr 0.000200 | loss: total=1.8718 id=-0.0000 perc=5.8522 l1f=0.1200 l1bg=0.0681 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:07:03] INFO: [A] ep 002 | batch 0170/0259 | data 0.6 ms | iter 1864.8 ms | lr 0.000200 | loss: total=1.9311 id=0.0000 perc=5.9000 l1f=0.1474 l1bg=0.1021 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:15:20] INFO: [A] ep 002 | batch 0180/0259 | data 0.9 ms | iter 2186.5 ms | lr 0.000200 | loss: total=1.8438 id=0.0000 perc=5.7094 l1f=0.1483 l1bg=0.0717 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:15:42] INFO: [A] ep 002 | batch 0190/0259 | data 0.9 ms | iter 1883.7 ms | lr 0.000200 | loss: total=1.8254 id=0.0000 perc=5.6175 l1f=0.1523 l1bg=0.0792 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:16:01] INFO: [A] ep 002 | batch 0200/0259 | data 0.7 ms | iter 1920.4 ms | lr 0.000200 | loss: total=1.8453 id=-0.0000 perc=5.6956 l1f=0.1181 l1bg=0.0894 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:16:21] INFO: [A] ep 002 | batch 0210/0259 | data 0.6 ms | iter 1893.5 ms | lr 0.000200 | loss: total=1.8543 id=0.0000 perc=5.7229 l1f=0.1323 l1bg=0.0845 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:16:40] INFO: [A] ep 002 | batch 0220/0259 | data 0.7 ms | iter 1972.7 ms | lr 0.000200 | loss: total=1.8949 id=0.0000 perc=5.5983 l1f=0.2473 l1bg=0.1165 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:17:00] INFO: [A] ep 002 | batch 0230/0259 | data 0.7 ms | iter 1970.6 ms | lr 0.000200 | loss: total=1.6672 id=0.0000 perc=5.1766 l1f=0.1153 l1bg=0.0681 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:17:19] INFO: [A] ep 002 | batch 0240/0259 | data 0.7 ms | iter 1897.9 ms | lr 0.000200 | loss: total=1.7420 id=0.0000 perc=5.4651 l1f=0.0995 l1bg=0.0627 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:17:39] INFO: [A] ep 002 | batch 0250/0259 | data 0.7 ms | iter 1929.8 ms | lr 0.000200 | loss: total=1.6431 id=0.0000 perc=5.1812 l1f=0.1050 l1bg=0.0468 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:17:56] INFO: [A] ep 002 | batch 0259/0259 | data 0.7 ms | iter 1410.2 ms | lr 0.000200 | loss: total=1.7590 id=0.0000 perc=5.5078 l1f=0.0907 l1bg=0.0704 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:18:06] INFO: [A] Train@Epoch2: g=1.9288 id=-0.0000 perc=5.9563 l1f=0.1468 l1bg=0.0833 | time=2172.1s
+[2025-11-08 20:18:15] INFO: [A] ep 002 | batch 0005/0012 | data 0.8 ms | iter 792.4 ms | lr 0.000000 | loss: total=1.5485 id=-0.0000 perc=4.9312 l1f=0.0752 l1bg=0.0391 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:18:19] INFO: [A] ep 002 | batch 0010/0012 | data 0.7 ms | iter 782.0 ms | lr 0.000000 | loss: total=1.4872 id=0.0000 perc=4.7442 l1f=0.0710 l1bg=0.0356 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:18:20] INFO: [A] ep 002 | batch 0012/0012 | data 0.7 ms | iter 598.7 ms | lr 0.000000 | loss: total=1.5877 id=0.0000 perc=5.0590 l1f=0.0694 l1bg=0.0423 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:18:30] INFO: [A] Val@Epoch2:   g=1.5924 id=-0.0000 perc=5.0436 l1f=0.0747 l1bg=0.0494 | time=24.4s
+[2025-11-08 20:18:30] INFO: [A] Checkpoint saved -> ckpts/gen_A_ep2.pt
+[2025-11-08 20:18:30] INFO: [A] New BEST (val id=-0.0000) -> ckpts/gen_A_best.pt
+[2025-11-08 20:18:30] INFO: [A] ===== Epoch 2/3 END =====
+[2025-11-08 20:18:30] INFO: [A] ===== Epoch 3/3 START =====
+[2025-11-08 20:18:30] INFO: [A] LR = 0.000200 | grad_clip = 0.0 | device = cpu
+[2025-11-08 20:18:54] INFO: [A] ep 003 | batch 0010/0259 | data 0.7 ms | iter 1866.6 ms | lr 0.000200 | loss: total=1.7727 id=0.0000 perc=5.1844 l1f=0.2342 l1bg=0.1237 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:19:13] INFO: [A] ep 003 | batch 0020/0259 | data 0.7 ms | iter 1864.9 ms | lr 0.000200 | loss: total=1.8850 id=-0.0000 perc=5.8026 l1f=0.1158 l1bg=0.0979 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:19:31] INFO: [A] ep 003 | batch 0030/0259 | data 0.7 ms | iter 1878.3 ms | lr 0.000200 | loss: total=1.8558 id=0.0000 perc=5.6981 l1f=0.1655 l1bg=0.0802 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:19:50] INFO: [A] ep 003 | batch 0040/0259 | data 0.7 ms | iter 1874.3 ms | lr 0.000200 | loss: total=1.9764 id=0.0000 perc=5.6423 l1f=0.2971 l1bg=0.1649 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:20:09] INFO: [A] ep 003 | batch 0050/0259 | data 0.7 ms | iter 1921.9 ms | lr 0.000200 | loss: total=1.7001 id=0.0000 perc=5.2683 l1f=0.1099 l1bg=0.0757 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:20:29] INFO: [A] ep 003 | batch 0060/0259 | data 0.7 ms | iter 1868.3 ms | lr 0.000200 | loss: total=1.7244 id=-0.0000 perc=5.0183 l1f=0.2430 l1bg=0.1217 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:20:48] INFO: [A] ep 003 | batch 0070/0259 | data 0.6 ms | iter 1869.5 ms | lr 0.000200 | loss: total=1.6691 id=0.0000 perc=5.2233 l1f=0.1030 l1bg=0.0609 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:21:06] INFO: [A] ep 003 | batch 0080/0259 | data 0.9 ms | iter 1866.1 ms | lr 0.000200 | loss: total=1.7164 id=0.0000 perc=5.2357 l1f=0.1723 l1bg=0.0768 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:21:26] INFO: [A] ep 003 | batch 0090/0259 | data 0.7 ms | iter 1871.4 ms | lr 0.000200 | loss: total=1.8571 id=0.0000 perc=5.7206 l1f=0.1413 l1bg=0.0844 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:21:45] INFO: [A] ep 003 | batch 0100/0259 | data 0.7 ms | iter 1882.0 ms | lr 0.000200 | loss: total=1.8305 id=0.0000 perc=5.4810 l1f=0.1911 l1bg=0.1098 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:22:04] INFO: [A] ep 003 | batch 0110/0259 | data 0.6 ms | iter 1872.5 ms | lr 0.000200 | loss: total=1.7095 id=0.0000 perc=5.1057 l1f=0.1937 l1bg=0.1004 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:22:22] INFO: [A] ep 003 | batch 0120/0259 | data 0.6 ms | iter 1870.9 ms | lr 0.000200 | loss: total=1.8702 id=-0.0000 perc=5.7167 l1f=0.1406 l1bg=0.0990 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:22:43] INFO: [A] ep 003 | batch 0130/0259 | data 1.0 ms | iter 2017.1 ms | lr 0.000200 | loss: total=1.5122 id=0.0000 perc=4.7875 l1f=0.0780 l1bg=0.0448 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:23:03] INFO: [A] ep 003 | batch 0140/0259 | data 0.7 ms | iter 1871.9 ms | lr 0.000200 | loss: total=1.6063 id=0.0000 perc=5.0206 l1f=0.0979 l1bg=0.0610 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:23:22] INFO: [A] ep 003 | batch 0150/0259 | data 0.6 ms | iter 1874.5 ms | lr 0.000200 | loss: total=1.6146 id=0.0000 perc=5.1355 l1f=0.0784 l1bg=0.0427 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:23:41] INFO: [A] ep 003 | batch 0160/0259 | data 0.7 ms | iter 1845.8 ms | lr 0.000200 | loss: total=1.7062 id=0.0000 perc=5.3558 l1f=0.1068 l1bg=0.0567 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:24:00] INFO: [A] ep 003 | batch 0170/0259 | data 0.8 ms | iter 1847.1 ms | lr 0.000200 | loss: total=1.6786 id=-0.0000 perc=5.2288 l1f=0.1023 l1bg=0.0691 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:24:18] INFO: [A] ep 003 | batch 0180/0259 | data 0.7 ms | iter 1836.8 ms | lr 0.000200 | loss: total=1.5595 id=0.0000 perc=4.8079 l1f=0.1060 l1bg=0.0747 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:24:37] INFO: [A] ep 003 | batch 0190/0259 | data 0.7 ms | iter 1868.9 ms | lr 0.000200 | loss: total=1.6619 id=0.0000 perc=5.1986 l1f=0.0988 l1bg=0.0628 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:24:56] INFO: [A] ep 003 | batch 0200/0259 | data 0.7 ms | iter 1839.7 ms | lr 0.000200 | loss: total=1.7049 id=0.0000 perc=5.2747 l1f=0.1266 l1bg=0.0718 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:25:15] INFO: [A] ep 003 | batch 0210/0259 | data 0.7 ms | iter 1844.7 ms | lr 0.000200 | loss: total=1.6084 id=-0.0000 perc=4.8962 l1f=0.1790 l1bg=0.0679 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:25:34] INFO: [A] ep 003 | batch 0220/0259 | data 0.7 ms | iter 1990.8 ms | lr 0.000200 | loss: total=1.6410 id=0.0000 perc=5.0476 l1f=0.1282 l1bg=0.0755 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:25:53] INFO: [A] ep 003 | batch 0230/0259 | data 0.6 ms | iter 1851.0 ms | lr 0.000200 | loss: total=1.5502 id=0.0000 perc=4.8310 l1f=0.0938 l1bg=0.0634 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:26:12] INFO: [A] ep 003 | batch 0240/0259 | data 0.7 ms | iter 1849.9 ms | lr 0.000200 | loss: total=1.7511 id=-0.0000 perc=5.4373 l1f=0.1078 l1bg=0.0768 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:26:31] INFO: [A] ep 003 | batch 0250/0259 | data 0.7 ms | iter 1855.4 ms | lr 0.000200 | loss: total=1.5049 id=0.0000 perc=4.7104 l1f=0.0837 l1bg=0.0583 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:26:47] INFO: [A] ep 003 | batch 0259/0259 | data 0.7 ms | iter 1369.2 ms | lr 0.000200 | loss: total=1.5148 id=-0.0000 perc=4.7707 l1f=0.0853 l1bg=0.0495 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:26:57] INFO: [A] Train@Epoch3: g=1.6789 id=-0.0000 perc=5.1626 l1f=0.1347 l1bg=0.0763 | time=506.7s
+[2025-11-08 20:27:06] INFO: [A] ep 003 | batch 0005/0012 | data 0.7 ms | iter 774.7 ms | lr 0.000000 | loss: total=1.3866 id=0.0000 perc=4.3971 l1f=0.0742 l1bg=0.0377 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:27:10] INFO: [A] ep 003 | batch 0010/0012 | data 0.7 ms | iter 787.5 ms | lr 0.000000 | loss: total=1.3392 id=0.0000 perc=4.2565 l1f=0.0658 l1bg=0.0359 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:27:11] INFO: [A] ep 003 | batch 0012/0012 | data 0.6 ms | iter 596.1 ms | lr 0.000000 | loss: total=1.4523 id=0.0000 perc=4.6168 l1f=0.0629 l1bg=0.0421 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 20:27:21] INFO: [A] Val@Epoch3:   g=1.4426 id=-0.0000 perc=4.5580 l1f=0.0703 l1bg=0.0470 | time=24.0s
+[2025-11-08 20:27:21] INFO: [A] Checkpoint saved -> ckpts/gen_A_ep3.pt
+[2025-11-08 20:27:21] INFO: [A] ===== Epoch 3/3 END =====
+[2025-11-08 20:27:21] INFO: [A] DONE. Last checkpoint -> ckpts/gen_A_last.pt
+[2025-11-08 22:04:44] INFO: ==== Environment ====
+[2025-11-08 22:04:44] INFO: PyTorch 2.2.2 | TorchVision 0.17.2 | CUDA=False
+[2025-11-08 22:04:44] INFO: Seed=42 | Device=cpu
+[2025-11-08 22:04:44] INFO: ==== HParams ====
+[2025-11-08 22:04:44] INFO: train_csv=data/metadata/sample_pairs_val.csv | val_csv=data/metadata/sample_pairs_train.csv | batch_size=8 | lr=0.0002 | workers=2 | w_id=1.0 w_perc=0.3 w_l1_face=0.4 w_l1_bg=1.0 | base=24 id_dim=128 width_id=1.0
+[2025-11-08 22:04:44] INFO: stageA_epochs=0 same_only=False | stageB_epochs=2 | grad_clip=0.0 | log_interval=10 | log_grad_norm=True
+[2025-11-08 22:04:44] INFO: init_gen=./work_dirs/train/ckpts/gen_A_last.pt | id_enc_ckpt=./work_dirs/train/ckpts/id_encoder_fixed.pt
+[2025-11-08 22:04:44] INFO: Logs -> work_dirs/train/ckpts/train.log | Outputs -> work_dirs/train/ckpts
+[2025-11-08 22:04:44] INFO: [B] Data prepared: train=2614 samples, val=47 samples, batch_size=8
+[2025-11-08 22:04:44] INFO: [B] Loaded IDEncoder from ./work_dirs/train/ckpts/id_encoder_fixed.pt
+[2025-11-08 22:04:44] INFO: [B] Initialized generator from ./work_dirs/train/ckpts/gen_A_last.pt
+[2025-11-08 22:04:44] INFO: [B] IDEncoderMobile params: 33,664
+[2025-11-08 22:04:44] INFO: [B] MobileSwapLite params: 130,932
+[2025-11-08 22:04:44] INFO: [B] ===== Epoch 1/2 START =====
+[2025-11-08 22:04:44] INFO: [B] LR = 0.000200 | grad_clip = 0.0 | device = cpu
+[2025-11-08 22:05:40] INFO: [B] ep 001 | batch 0010/0327 | data 0.7 ms | iter 4171.7 ms | lr 0.000200 | loss: total=1.4563 id=0.0000 perc=4.7165 l1f=0.0429 l1bg=0.0242 | grad 0.19 | mem 0.0B/0.0B
+[2025-11-08 22:07:59] INFO: [B] ep 001 | batch 0040/0327 | data 0.7 ms | iter 4526.4 ms | lr 0.000200 | loss: total=1.3823 id=0.0000 perc=4.4417 l1f=0.0558 l1bg=0.0274 | grad 0.43 | mem 0.0B/0.0B
+[2025-11-08 22:08:42] INFO: [B] ep 001 | batch 0050/0327 | data 0.6 ms | iter 3921.3 ms | lr 0.000200 | loss: total=1.4091 id=0.0000 perc=4.5535 l1f=0.0416 l1bg=0.0264 | grad 0.33 | mem 0.0B/0.0B
+[2025-11-08 22:09:23] INFO: [B] ep 001 | batch 0060/0327 | data 0.6 ms | iter 3953.6 ms | lr 0.000200 | loss: total=1.4100 id=0.0000 perc=4.5646 l1f=0.0387 l1bg=0.0251 | grad 0.23 | mem 0.0B/0.0B
+[2025-11-08 22:10:03] INFO: [B] ep 001 | batch 0070/0327 | data 0.6 ms | iter 4019.9 ms | lr 0.000200 | loss: total=1.4368 id=0.0000 perc=4.6291 l1f=0.0450 l1bg=0.0300 | grad 0.35 | mem 0.0B/0.0B
+[2025-11-08 22:10:43] INFO: [B] ep 001 | batch 0080/0327 | data 0.7 ms | iter 3959.8 ms | lr 0.000200 | loss: total=1.4611 id=0.0000 perc=4.7065 l1f=0.0442 l1bg=0.0315 | grad 0.24 | mem 0.0B/0.0B
+[2025-11-08 22:11:23] INFO: [B] ep 001 | batch 0090/0327 | data 0.6 ms | iter 4000.8 ms | lr 0.000200 | loss: total=1.4199 id=0.0000 perc=4.5791 l1f=0.0476 l1bg=0.0272 | grad 0.40 | mem 0.0B/0.0B
+[2025-11-08 22:12:03] INFO: [B] ep 001 | batch 0100/0327 | data 0.6 ms | iter 3933.2 ms | lr 0.000200 | loss: total=1.4109 id=0.0000 perc=4.5264 l1f=0.0572 l1bg=0.0301 | grad 0.29 | mem 0.0B/0.0B
+[2025-11-08 22:12:43] INFO: [B] ep 001 | batch 0110/0327 | data 0.6 ms | iter 4010.6 ms | lr 0.000200 | loss: total=1.3512 id=0.0000 perc=4.3496 l1f=0.0453 l1bg=0.0281 | grad 0.41 | mem 0.0B/0.0B
+[2025-11-08 22:13:26] INFO: [B] ep 001 | batch 0120/0327 | data 8.3 ms | iter 4714.9 ms | lr 0.000200 | loss: total=1.3906 id=0.0000 perc=4.4371 l1f=0.0657 l1bg=0.0332 | grad 0.46 | mem 0.0B/0.0B
+[2025-11-08 22:18:10] INFO: [B] ep 001 | batch 0130/0327 | data 0.7 ms | iter 3928.5 ms | lr 0.000200 | loss: total=1.3686 id=0.0000 perc=4.4061 l1f=0.0412 l1bg=0.0303 | grad 0.27 | mem 0.0B/0.0B
+[2025-11-08 22:26:16] INFO: [B] ep 001 | batch 0140/0327 | data 0.7 ms | iter 4501.0 ms | lr 0.000200 | loss: total=1.4806 id=0.0000 perc=4.6768 l1f=0.0800 l1bg=0.0456 | grad 0.47 | mem 0.0B/0.0B
+[2025-11-08 22:26:56] INFO: [B] ep 001 | batch 0150/0327 | data 0.7 ms | iter 3935.6 ms | lr 0.000200 | loss: total=1.3453 id=0.0000 perc=4.3438 l1f=0.0485 l1bg=0.0228 | grad 0.28 | mem 0.0B/0.0B
+[2025-11-08 22:27:36] INFO: [B] ep 001 | batch 0160/0327 | data 0.7 ms | iter 4015.4 ms | lr 0.000200 | loss: total=1.3726 id=0.0000 perc=4.3786 l1f=0.0622 l1bg=0.0341 | grad 0.44 | mem 0.0B/0.0B
+[2025-11-08 22:28:16] INFO: [B] ep 001 | batch 0170/0327 | data 0.6 ms | iter 4350.9 ms | lr 0.000200 | loss: total=1.3658 id=0.0000 perc=4.4208 l1f=0.0414 l1bg=0.0230 | grad 0.20 | mem 0.0B/0.0B
+[2025-11-08 22:28:57] INFO: [B] ep 001 | batch 0180/0327 | data 0.6 ms | iter 3938.2 ms | lr 0.000200 | loss: total=1.3083 id=0.0000 perc=4.2173 l1f=0.0507 l1bg=0.0228 | grad 0.36 | mem 0.0B/0.0B
+[2025-11-08 22:29:37] INFO: [B] ep 001 | batch 0190/0327 | data 6.4 ms | iter 4313.5 ms | lr 0.000200 | loss: total=1.2556 id=0.0000 perc=4.0708 l1f=0.0398 l1bg=0.0185 | grad 0.28 | mem 0.0B/0.0B
+[2025-11-08 22:30:17] INFO: [B] ep 001 | batch 0200/0327 | data 0.6 ms | iter 3919.7 ms | lr 0.000200 | loss: total=1.4046 id=0.0000 perc=4.4707 l1f=0.0700 l1bg=0.0354 | grad 0.46 | mem 0.0B/0.0B
+[2025-11-08 22:30:57] INFO: [B] ep 001 | batch 0210/0327 | data 0.6 ms | iter 3932.6 ms | lr 0.000200 | loss: total=1.3753 id=0.0000 perc=4.4135 l1f=0.0496 l1bg=0.0315 | grad 0.39 | mem 0.0B/0.0B
+[2025-11-08 22:34:47] INFO: [B] ep 001 | batch 0220/0327 | data 0.6 ms | iter 7117.0 ms | lr 0.000200 | loss: total=1.2908 id=0.0000 perc=4.1400 l1f=0.0517 l1bg=0.0281 | grad 0.48 | mem 0.0B/0.0B
+[2025-11-08 22:35:31] INFO: [B] ep 001 | batch 0230/0327 | data 6.4 ms | iter 4286.2 ms | lr 0.000200 | loss: total=1.3385 id=0.0000 perc=4.2243 l1f=0.0766 l1bg=0.0405 | grad 0.51 | mem 0.0B/0.0B
+[2025-11-08 22:36:12] INFO: [B] ep 001 | batch 0240/0327 | data 0.6 ms | iter 3967.8 ms | lr 0.000200 | loss: total=1.2737 id=0.0000 perc=4.1258 l1f=0.0366 l1bg=0.0213 | grad 0.25 | mem 0.0B/0.0B
+[2025-11-08 22:36:52] INFO: [B] ep 001 | batch 0250/0327 | data 0.9 ms | iter 4016.9 ms | lr 0.000200 | loss: total=1.3393 id=0.0000 perc=4.2900 l1f=0.0472 l1bg=0.0334 | grad 0.29 | mem 0.0B/0.0B
+[2025-11-08 22:37:32] INFO: [B] ep 001 | batch 0260/0327 | data 0.6 ms | iter 3960.9 ms | lr 0.000200 | loss: total=1.3317 id=0.0000 perc=4.2495 l1f=0.0626 l1bg=0.0317 | grad 0.53 | mem 0.0B/0.0B
+[2025-11-08 22:38:12] INFO: [B] ep 001 | batch 0270/0327 | data 6.8 ms | iter 3985.5 ms | lr 0.000200 | loss: total=1.3042 id=0.0000 perc=4.2022 l1f=0.0412 l1bg=0.0271 | grad 0.26 | mem 0.0B/0.0B
+[2025-11-08 22:38:52] INFO: [B] ep 001 | batch 0280/0327 | data 0.7 ms | iter 3945.9 ms | lr 0.000200 | loss: total=1.2756 id=0.0000 perc=4.0646 l1f=0.0606 l1bg=0.0320 | grad 0.48 | mem 0.0B/0.0B
+[2025-11-08 22:39:32] INFO: [B] ep 001 | batch 0290/0327 | data 6.2 ms | iter 3947.5 ms | lr 0.000200 | loss: total=1.2832 id=0.0000 perc=4.1458 l1f=0.0346 l1bg=0.0256 | grad 0.26 | mem 0.0B/0.0B
+[2025-11-08 22:40:11] INFO: [B] ep 001 | batch 0300/0327 | data 0.7 ms | iter 3949.8 ms | lr 0.000200 | loss: total=1.2427 id=0.0000 perc=4.0291 l1f=0.0306 l1bg=0.0217 | grad 0.15 | mem 0.0B/0.0B
+[2025-11-08 22:40:54] INFO: [B] ep 001 | batch 0310/0327 | data 0.6 ms | iter 4604.5 ms | lr 0.000200 | loss: total=1.3414 id=0.0000 perc=4.2003 l1f=0.0869 l1bg=0.0466 | grad 0.45 | mem 0.0B/0.0B
+[2025-11-08 22:53:18] INFO: [B] ep 001 | batch 0320/0327 | data 6.0 ms | iter 10721.3 ms | lr 0.000200 | loss: total=1.2529 id=0.0000 perc=4.0479 l1f=0.0377 l1bg=0.0235 | grad 0.29 | mem 0.0B/0.0B
+[2025-11-08 22:53:53] INFO: [B] ep 001 | batch 0327/0327 | data 0.7 ms | iter 2863.6 ms | lr 0.000200 | loss: total=1.2917 id=0.0000 perc=4.1469 l1f=0.0390 l1bg=0.0320 | grad 0.27 | mem 0.0B/0.0B
+[2025-11-08 22:54:03] INFO: [B] Train@Epoch1: g=1.3703 id=-0.0000 perc=4.4019 l1f=0.0500 l1bg=0.0297 | time=2959.4s
+[2025-11-08 22:54:17] INFO: [B] ep 001 | batch 0005/0006 | data 6.6 ms | iter 1619.5 ms | lr 0.000000 | loss: total=1.1428 id=0.0000 perc=3.7245 l1f=0.0259 l1bg=0.0151 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 22:54:18] INFO: [B] ep 001 | batch 0006/0006 | data 0.6 ms | iter 1507.0 ms | lr 0.000000 | loss: total=1.2330 id=0.0000 perc=4.0018 l1f=0.0273 l1bg=0.0215 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 22:54:28] INFO: [B] Val@Epoch1:   g=1.1864 id=0.0000 perc=3.8489 l1f=0.0283 l1bg=0.0204 | time=24.9s
+[2025-11-08 22:54:28] INFO: [B] Checkpoint saved -> work_dirs/train/ckpts/gen_B_ep1.pt
+[2025-11-08 22:54:28] INFO: [B] New BEST (val id=0.0000) -> work_dirs/train/ckpts/gen_B_best.pt
+[2025-11-08 22:54:30] INFO: [B] ===== Epoch 1/2 END =====
+[2025-11-08 22:54:30] INFO: [B] ===== Epoch 2/2 START =====
+[2025-11-08 22:54:30] INFO: [B] LR = 0.000200 | grad_clip = 0.0 | device = cpu
+[2025-11-08 22:55:19] INFO: [B] ep 002 | batch 0010/0327 | data 1.0 ms | iter 3997.2 ms | lr 0.000200 | loss: total=1.2683 id=0.0000 perc=4.1029 l1f=0.0351 l1bg=0.0234 | grad 0.18 | mem 0.0B/0.0B
+[2025-11-08 22:56:01] INFO: [B] ep 002 | batch 0020/0327 | data 0.7 ms | iter 4034.5 ms | lr 0.000200 | loss: total=1.2670 id=0.0000 perc=4.0479 l1f=0.0519 l1bg=0.0318 | grad 0.49 | mem 0.0B/0.0B
+[2025-11-08 22:56:42] INFO: [B] ep 002 | batch 0030/0327 | data 0.7 ms | iter 3999.0 ms | lr 0.000200 | loss: total=1.2178 id=0.0000 perc=3.9217 l1f=0.0392 l1bg=0.0256 | grad 0.31 | mem 0.0B/0.0B
+[2025-11-08 22:57:23] INFO: [B] ep 002 | batch 0040/0327 | data 0.7 ms | iter 3925.7 ms | lr 0.000200 | loss: total=1.2836 id=0.0000 perc=4.1331 l1f=0.0380 l1bg=0.0285 | grad 0.26 | mem 0.0B/0.0B
+[2025-11-08 22:58:03] INFO: [B] ep 002 | batch 0050/0327 | data 0.7 ms | iter 3992.5 ms | lr 0.000200 | loss: total=1.2432 id=0.0000 perc=3.9256 l1f=0.0797 l1bg=0.0336 | grad 0.48 | mem 0.0B/0.0B
+[2025-11-08 22:58:44] INFO: [B] ep 002 | batch 0060/0327 | data 0.6 ms | iter 4048.0 ms | lr 0.000200 | loss: total=1.2371 id=0.0000 perc=3.9976 l1f=0.0380 l1bg=0.0227 | grad 0.28 | mem 0.0B/0.0B
+[2025-11-08 22:59:25] INFO: [B] ep 002 | batch 0070/0327 | data 0.6 ms | iter 3915.8 ms | lr 0.000200 | loss: total=1.2199 id=0.0000 perc=3.9241 l1f=0.0468 l1bg=0.0239 | grad 0.32 | mem 0.0B/0.0B
+[2025-11-08 23:00:05] INFO: [B] ep 002 | batch 0080/0327 | data 0.8 ms | iter 3982.6 ms | lr 0.000200 | loss: total=1.2723 id=0.0000 perc=4.1201 l1f=0.0323 l1bg=0.0233 | grad 0.24 | mem 0.0B/0.0B
+[2025-11-08 23:00:46] INFO: [B] ep 002 | batch 0090/0327 | data 0.7 ms | iter 4444.3 ms | lr 0.000200 | loss: total=1.2548 id=0.0000 perc=4.0127 l1f=0.0547 l1bg=0.0291 | grad 0.31 | mem 0.0B/0.0B
+[2025-11-08 23:01:26] INFO: [B] ep 002 | batch 0100/0327 | data 0.7 ms | iter 3923.8 ms | lr 0.000200 | loss: total=1.2306 id=0.0000 perc=3.9399 l1f=0.0498 l1bg=0.0287 | grad 0.45 | mem 0.0B/0.0B
+[2025-11-08 23:02:06] INFO: [B] ep 002 | batch 0110/0327 | data 0.7 ms | iter 3904.2 ms | lr 0.000200 | loss: total=1.1636 id=0.0000 perc=3.7426 l1f=0.0388 l1bg=0.0253 | grad 0.33 | mem 0.0B/0.0B
+[2025-11-08 23:02:46] INFO: [B] ep 002 | batch 0120/0327 | data 0.6 ms | iter 3971.6 ms | lr 0.000200 | loss: total=1.3689 id=0.0000 perc=4.3348 l1f=0.0715 l1bg=0.0398 | grad 0.44 | mem 0.0B/0.0B
+[2025-11-08 23:03:26] INFO: [B] ep 002 | batch 0130/0327 | data 0.6 ms | iter 3968.5 ms | lr 0.000200 | loss: total=1.3577 id=0.0000 perc=4.3359 l1f=0.0499 l1bg=0.0370 | grad 0.33 | mem 0.0B/0.0B
+[2025-11-08 23:04:07] INFO: [B] ep 002 | batch 0140/0327 | data 0.7 ms | iter 3914.2 ms | lr 0.000200 | loss: total=1.1969 id=0.0000 perc=3.8134 l1f=0.0517 l1bg=0.0322 | grad 0.40 | mem 0.0B/0.0B
+[2025-11-08 23:04:47] INFO: [B] ep 002 | batch 0150/0327 | data 0.6 ms | iter 4023.3 ms | lr 0.000200 | loss: total=1.1729 id=0.0000 perc=3.8038 l1f=0.0315 l1bg=0.0191 | grad 0.33 | mem 0.0B/0.0B
+[2025-11-08 23:05:28] INFO: [B] ep 002 | batch 0160/0327 | data 0.7 ms | iter 3968.7 ms | lr 0.000200 | loss: total=1.1665 id=0.0000 perc=3.7597 l1f=0.0393 l1bg=0.0228 | grad 0.48 | mem 0.0B/0.0B
+[2025-11-08 23:06:08] INFO: [B] ep 002 | batch 0170/0327 | data 0.7 ms | iter 3973.7 ms | lr 0.000200 | loss: total=1.2010 id=0.0000 perc=3.8292 l1f=0.0542 l1bg=0.0306 | grad 0.34 | mem 0.0B/0.0B
+[2025-11-08 23:06:49] INFO: [B] ep 002 | batch 0180/0327 | data 0.6 ms | iter 3946.4 ms | lr 0.000200 | loss: total=1.1366 id=0.0000 perc=3.6753 l1f=0.0382 l1bg=0.0187 | grad 0.31 | mem 0.0B/0.0B
+[2025-11-08 23:07:29] INFO: [B] ep 002 | batch 0190/0327 | data 0.7 ms | iter 4002.8 ms | lr 0.000200 | loss: total=1.2454 id=0.0000 perc=4.0026 l1f=0.0457 l1bg=0.0264 | grad 0.39 | mem 0.0B/0.0B
+[2025-11-08 23:08:09] INFO: [B] ep 002 | batch 0200/0327 | data 0.7 ms | iter 3953.4 ms | lr 0.000200 | loss: total=1.2862 id=-0.0000 perc=4.1636 l1f=0.0321 l1bg=0.0243 | grad 0.17 | mem 0.0B/0.0B
+[2025-11-08 23:08:50] INFO: [B] ep 002 | batch 0210/0327 | data 0.7 ms | iter 4009.9 ms | lr 0.000200 | loss: total=1.1731 id=-0.0000 perc=3.7561 l1f=0.0504 l1bg=0.0262 | grad 0.38 | mem 0.0B/0.0B
+[2025-11-08 23:09:30] INFO: [B] ep 002 | batch 0220/0327 | data 0.7 ms | iter 3925.5 ms | lr 0.000200 | loss: total=1.1382 id=0.0000 perc=3.6598 l1f=0.0376 l1bg=0.0252 | grad 0.41 | mem 0.0B/0.0B
+[2025-11-08 23:10:10] INFO: [B] ep 002 | batch 0230/0327 | data 0.7 ms | iter 3989.0 ms | lr 0.000200 | loss: total=1.2527 id=0.0000 perc=4.0397 l1f=0.0393 l1bg=0.0250 | grad 0.41 | mem 0.0B/0.0B
+[2025-11-08 23:10:50] INFO: [B] ep 002 | batch 0240/0327 | data 0.7 ms | iter 3931.0 ms | lr 0.000200 | loss: total=1.1511 id=0.0000 perc=3.7180 l1f=0.0361 l1bg=0.0213 | grad 0.46 | mem 0.0B/0.0B
+[2025-11-08 23:11:30] INFO: [B] ep 002 | batch 0250/0327 | data 0.7 ms | iter 3969.6 ms | lr 0.000200 | loss: total=1.1900 id=0.0000 perc=3.8368 l1f=0.0418 l1bg=0.0223 | grad 0.29 | mem 0.0B/0.0B
+[2025-11-08 23:12:11] INFO: [B] ep 002 | batch 0260/0327 | data 0.6 ms | iter 3996.2 ms | lr 0.000200 | loss: total=1.2348 id=0.0000 perc=3.9939 l1f=0.0366 l1bg=0.0220 | grad 0.25 | mem 0.0B/0.0B
+[2025-11-08 23:12:50] INFO: [B] ep 002 | batch 0270/0327 | data 0.7 ms | iter 3924.1 ms | lr 0.000200 | loss: total=1.2695 id=0.0000 perc=4.0828 l1f=0.0411 l1bg=0.0282 | grad 0.35 | mem 0.0B/0.0B
+[2025-11-08 23:13:31] INFO: [B] ep 002 | batch 0280/0327 | data 0.7 ms | iter 4226.1 ms | lr 0.000200 | loss: total=1.2674 id=0.0000 perc=3.9484 l1f=0.0876 l1bg=0.0478 | grad 0.49 | mem 0.0B/0.0B
+[2025-11-08 23:14:12] INFO: [B] ep 002 | batch 0290/0327 | data 0.7 ms | iter 4004.7 ms | lr 0.000200 | loss: total=1.1776 id=0.0000 perc=3.7779 l1f=0.0452 l1bg=0.0261 | grad 0.73 | mem 0.0B/0.0B
+[2025-11-08 23:14:51] INFO: [B] ep 002 | batch 0300/0327 | data 0.7 ms | iter 3966.2 ms | lr 0.000200 | loss: total=1.2442 id=0.0000 perc=3.9973 l1f=0.0473 l1bg=0.0261 | grad 0.52 | mem 0.0B/0.0B
+[2025-11-08 23:15:31] INFO: [B] ep 002 | batch 0310/0327 | data 0.7 ms | iter 4030.1 ms | lr 0.000200 | loss: total=1.2416 id=0.0000 perc=3.9692 l1f=0.0491 l1bg=0.0313 | grad 0.35 | mem 0.0B/0.0B
+[2025-11-08 23:16:12] INFO: [B] ep 002 | batch 0320/0327 | data 0.8 ms | iter 4049.8 ms | lr 0.000200 | loss: total=1.1393 id=0.0000 perc=3.6749 l1f=0.0279 l1bg=0.0257 | grad 0.49 | mem 0.0B/0.0B
+[2025-11-08 23:16:39] INFO: [B] ep 002 | batch 0327/0327 | data 0.7 ms | iter 2829.2 ms | lr 0.000200 | loss: total=1.2842 id=0.0000 perc=4.0980 l1f=0.0460 l1bg=0.0364 | grad 0.42 | mem 0.0B/0.0B
+[2025-11-08 23:16:49] INFO: [B] Train@Epoch2: g=1.2442 id=-0.0000 perc=3.9928 l1f=0.0465 l1bg=0.0278 | time=1338.8s
+[2025-11-08 23:17:02] INFO: [B] ep 002 | batch 0005/0006 | data 0.7 ms | iter 1634.0 ms | lr 0.000000 | loss: total=1.0546 id=0.0000 perc=3.4369 l1f=0.0240 l1bg=0.0139 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 23:17:04] INFO: [B] ep 002 | batch 0006/0006 | data 0.6 ms | iter 1459.5 ms | lr 0.000000 | loss: total=1.1378 id=0.0000 perc=3.6936 l1f=0.0255 l1bg=0.0196 | grad 0.00 | mem 0.0B/0.0B
+[2025-11-08 23:17:14] INFO: [B] Val@Epoch2:   g=1.1003 id=-0.0000 perc=3.5698 l1f=0.0264 l1bg=0.0187 | time=25.0s
+[2025-11-08 23:17:14] INFO: [B] Checkpoint saved -> work_dirs/train/ckpts/gen_B_ep2.pt
+[2025-11-08 23:17:14] INFO: [B] New BEST (val id=-0.0000) -> work_dirs/train/ckpts/gen_B_best.pt
+[2025-11-08 23:17:14] INFO: [B] ===== Epoch 2/2 END =====
+[2025-11-08 23:17:14] INFO: [B] DONE. Last checkpoint -> work_dirs/train/ckpts/gen_B_last.pt
+[2025-11-08 23:17:14] INFO: All done.
