@@ -1,0 +1,10 @@
+[2025-11-08 23:19:40] INFO: Evaluating checkpoint: work_dirs/train/ckpts/gen_B_last.pt
+[2025-11-08 23:19:40] INFO: Val samples: 47 | batch_size=8 | device=cpu
+[2025-11-08 23:19:40] INFO: Models loaded.
+[2025-11-08 23:20:10] INFO: Done. Elapsed 30.1s
+[2025-11-08 23:20:10] INFO: Summary: epoch=-1 | IDcos_mean=0.9999999188362284 | IDcos_std=1.5029986073181686e-07 | SSIM_mean=0.42113301654656726 | PSNR_mean=11.273386478424072 | PSNR_face_mean=6.0827657381693525 | PSNR_bg_mean=8.097964922587076 | MSSSIM_mean=0.6336243251959482 | num_samples=47 | time_sec=30.133390188217163
+[2025-11-08 23:21:20] INFO: Evaluating checkpoint: work_dirs/train/ckpts/gen_B_last.pt
+[2025-11-08 23:21:20] INFO: Val samples: 47 | batch_size=8 | device=cpu
+[2025-11-08 23:21:20] INFO: Models loaded.
+[2025-11-08 23:21:51] INFO: Done. Elapsed 30.4s
+[2025-11-08 23:21:51] INFO: Summary: epoch=-1 | IDcos_mean=0.9999999188362284 | IDcos_std=1.5029986073181686e-07 | SSIM_mean=0.42113301654656726 | PSNR_mean=11.273386478424072 | PSNR_face_mean=6.0827657381693525 | PSNR_bg_mean=8.097964922587076 | MSSSIM_mean=0.6336243251959482 | num_samples=47 | time_sec=30.382925987243652

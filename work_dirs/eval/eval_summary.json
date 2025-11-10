@@ -1,0 +1,8 @@
+{
+  "num_samples": 47,
+  "cos_out_src_mean": 1.0000000469228054,
+  "cos_out_tgt_mean": 1.00000003550915,
+  "id_margin_mean": 1.1413655382521609e-08,
+  "psnr_mean": 31.913085516826104,
+  "roc_auc_margin": NaN
+}

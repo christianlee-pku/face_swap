@@ -1,0 +1,16 @@
+[2025-11-08 15:37:00] INFO: Evaluating checkpoint: work_dirs/train/ckpts/gen_B_ep1.pt
+[2025-11-08 15:37:00] INFO: Val samples: 11035 | batch_size=8 | device=cpu
+[2025-11-08 15:37:00] INFO: Models loaded.
+[2025-11-08 15:38:48] INFO: batch 20/1380: IDcos=1.0000 | SSIM=0.5792 | PSNR=12.08 dB
+[2025-11-08 15:40:23] INFO: batch 40/1380: IDcos=1.0000 | SSIM=0.5730 | PSNR=11.67 dB
+[2025-11-08 15:41:55] INFO: batch 60/1380: IDcos=1.0000 | SSIM=0.5374 | PSNR=10.81 dB
+[2025-11-08 15:43:20] INFO: batch 80/1380: IDcos=1.0000 | SSIM=0.4920 | PSNR=10.60 dB
+[2025-11-08 15:44:46] INFO: batch 100/1380: IDcos=1.0000 | SSIM=0.5525 | PSNR=11.34 dB
+[2025-11-08 15:46:08] INFO: batch 120/1380: IDcos=1.0000 | SSIM=0.5495 | PSNR=11.47 dB
+[2025-11-08 15:47:37] INFO: batch 140/1380: IDcos=1.0000 | SSIM=0.5109 | PSNR=10.11 dB
+[2025-11-08 15:49:05] INFO: batch 160/1380: IDcos=1.0000 | SSIM=0.5591 | PSNR=11.47 dB
+[2025-11-08 15:50:50] INFO: Evaluating checkpoint: work_dirs/train/ckpts/gen_B_ep1.pt
+[2025-11-08 15:50:50] INFO: Val samples: 47 | batch_size=8 | device=cpu
+[2025-11-08 15:50:50] INFO: Models loaded.
+[2025-11-08 15:51:21] INFO: Done. Elapsed 30.7s
+[2025-11-08 15:51:21] INFO: Summary: epoch=1 | IDcos_mean=0.9999999023498373 | IDcos_std=2.398175717125104e-07 | SSIM_mean=0.5181574026743571 | PSNR_mean=10.691501458485922 | PSNR_face_mean=7.268349647521973 | PSNR_bg_mean=4.6874299844106035 | MSSSIM_mean=0.22437133640050888 | num_samples=47 | time_sec=30.698776245117188

@@ -1,0 +1,5 @@
+[2025-11-08 15:51:55] INFO: Evaluating checkpoint: work_dirs/train/ckpts/gen_B_ep3.pt
+[2025-11-08 15:51:55] INFO: Val samples: 47 | batch_size=8 | device=cpu
+[2025-11-08 15:51:55] INFO: Models loaded.
+[2025-11-08 15:52:30] INFO: Done. Elapsed 35.2s
+[2025-11-08 15:52:30] INFO: Summary: epoch=3 | IDcos_mean=0.9999977096598199 | IDcos_std=1.3909000586911745e-06 | SSIM_mean=0.5208937128384908 | PSNR_mean=10.74335781733195 | PSNR_face_mean=7.191125551859538 | PSNR_bg_mean=4.862622181574504 | MSSSIM_mean=0.23440720389286676 | num_samples=47 | time_sec=35.18816685676575
