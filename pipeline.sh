@@ -15,18 +15,18 @@ python -m scripts.preprocess_lfw
 #    - init generator from Stage A last/best if applicable
 # =========================
 python -m scripts.train \
-  --train-csv data/metadata/pairs_val.csv \
-  --val-csv   data/metadata/sample_pairs_train.csv \
+  --train-csv data/metadata/pairs_train.csv \
+  --val-csv   data/metadata/pairs_val.csv \
   --stageA-epochs 3 --stageA-same-only \
   --stageB-epochs 2 \
-  --batch-size 4 --lr 2e-4 \
+  --batch-size 8 --lr 2e-4 \
   --w-perc 0.3 --w-l1-face 0.4 --w-l1-bg 1.0 --w-id 1.0
   --log-interval 10 --log-grad-norm \
   --out-dir ./work_dirs/train/ckpts/
 
 python -m scripts.train \
-  --train-csv data/metadata/sample_pairs_val.csv \
-  --val-csv   data/metadata/sample_pairs_train.csv \
+  --train-csv data/metadata/pairs_train.csv \
+  --val-csv   data/metadata/pairs_val.csv \
   --stageA-epochs 0 \
   --stageB-epochs 2 \
   --batch-size 8 --lr 2e-4 \
@@ -49,14 +49,14 @@ python -m scripts.train \
 #   --out-dir ./work_dirs/eval
 
 # evaluate all B-stage checkpoints and draw curves
-python -m scripts.eval \
-  --val-csv data/metadata/sample_pairs_train.csv \
-  --ckpt-glob "work_dirs/train/ckpts/gen_B_*.pt" \
-  --batch-size 8 \
-  --out-dir ./work_dirs/eval/
+# python -m scripts.eval \
+#   --val-csv data/metadata/sample_pairs_train.csv \
+#   --ckpt-glob "work_dirs/train/ckpts/gen_B_*.pt" \
+#   --batch-size 8 \
+#   --out-dir ./work_dirs/eval/
 
 python -m scripts.eval_accuracy \
-  --val-csv data/metadata/sample_pairs_train.csv \
+  --val-csv data/metadata/pairs_val.csv \
   --ckpt work_dirs/train/ckpts/gen_B_best.pt \
   --id-enc-ckpt work_dirs/train/ckpts/id_encoder_fixed.pt \
   --device cpu \

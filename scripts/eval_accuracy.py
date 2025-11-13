@@ -1,8 +1,3 @@
-# Evaluate face-swap quality and create accuracy graphs.
-# - Computes identity cosine metrics and PSNR on (out, tgt)
-# - Saves per-sample CSV and multiple diagnostic plots
-# - No external deps beyond numpy/matplotlib/sklearn
-
 import argparse
 import json
 from pathlib import Path

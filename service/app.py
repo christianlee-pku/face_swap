@@ -241,22 +241,3 @@ async def swap(
         "X-Device": settings.DEVICE,
     }
     return StreamingResponse(buf, media_type="image/png", headers=headers)
-
-
-@app.get("/metrics")
-async def metrics():
-    """
-    Minimal text metrics endpoint.
-    Integrate Prometheus/OTEL in production if richer metrics are required.
-    """
-    loaded = _engine is not None
-    return PlainTextResponse(
-        "\n".join(
-            [
-                f"engine_loaded {1 if loaded else 0}",
-                f"device{{name=\"{settings.DEVICE}\"}} 1",
-                f"max_image_mb {settings.MAX_IMAGE_MB}",
-            ]
-        )
-        + "\n"
-    )

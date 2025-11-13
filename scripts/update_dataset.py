@@ -1,9 +1,3 @@
-# Incrementally ingest new raw images:
-# - Face-detect + align into an aligned dataset tree
-# - Append to images index CSV
-# - (Re)generate pairs_train.csv / pairs_val.csv with controllable ratios
-# Comments in English only.
-
 import argparse
 import csv
 import hashlib
@@ -129,8 +123,6 @@ def train_val_split(pairs: List[Dict], val_ratio: float) -> Tuple[List[Dict], Li
     n = len(pairs)
     nv = int(n * val_ratio)
     return pairs[nv:], pairs[:nv]
-
-# ---------- main ----------
 
 def main():
     ap = argparse.ArgumentParser(description="Incrementally update aligned dataset and pairs CSV.")
