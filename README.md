@@ -231,7 +231,7 @@ You are responsible for complying with laws, policies, and obtaining **clear con
 
 ## License
 
-MIT (add your name and year). Third‑party models/libraries are subject to their own licenses.
+Third‑party models/libraries are subject to their own licenses.
 
 ---
 
