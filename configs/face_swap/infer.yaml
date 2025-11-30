@@ -1,0 +1,36 @@
+name: lfw-unet-infer-001
+seed: 42
+
+dataset:
+  type: LFWDataset
+  root: data/lfw/processed
+  split: val
+  manifest: data/lfw/manifest.json
+  sample_ratio_overrides:
+    val: 0.05
+  sample_seed: 42
+
+model:
+  type: UNetFaceSwap
+  channels: 64
+
+loss:
+  type: FaceSwapLoss
+
+eval:
+  batch_size: 4
+  num_workers: 0
+  pin_memory: false
+  log_interval: 10
+  checkpoint: work_dirs/face_swap/lfw-unet-baseline-001/checkpoints/epoch_01.pt
+
+infer:
+  sources:
+    - data/lfw/processed/Aaron_Sorkin/Aaron_Sorkin_0001.jpg
+  targets:
+    - data/lfw/processed/Aaron_Sorkin/Aaron_Sorkin_0002.jpg
+  output_dir: work_dirs/face_swap/lfw-unet-infer-001/infer-samples
+  checkpoint: work_dirs/face_swap/lfw-unet-baseline-001/checkpoints/epoch_01.pt
+
+runner:
+  type: BaseRunner

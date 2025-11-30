@@ -1,0 +1,40 @@
+name: lfw-unet-baseline-002
+seed: 42
+
+dataset:
+  type: LFWDataset
+  root: data/lfw/processed
+  split: train
+  manifest: data/lfw/manifest.json
+  sample_ratio_overrides:
+    train: 0.2
+    val: 0.01
+  sample_seed: 42
+
+model:
+  type: UNetFaceSwap
+  channels: 64
+
+loss:
+  type: FaceSwapLoss
+
+runner:
+  type: BaseRunner
+
+optimizer:
+  type: Adam
+  lr: 0.0002
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+
+train:
+  epochs: 1
+  batch_size: 8
+  num_workers: 4
+  pin_memory: false
+  log_interval: 10
+
+hooks:
+  checkpoint:
+    save_last: true
+    save_best: true

@@ -1,0 +1,22 @@
+name: lfw-unet-export-001
+seed: 42
+
+dataset:
+  type: LFWDataset
+  root: data/lfw/processed
+  split: val
+  manifest: data/lfw/manifest.json
+
+model:
+  type: UNetFaceSwap
+  channels: 64
+
+loss:
+  type: FaceSwapLoss
+
+runner:
+  type: BaseRunner
+
+export:
+  dynamic_axes: true
+  precision: fp16

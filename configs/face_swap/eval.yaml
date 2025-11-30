@@ -1,0 +1,28 @@
+name: lfw-unet-eval-001
+seed: 42
+
+dataset:
+  type: LFWDataset
+  root: data/lfw/processed
+  split: val
+  manifest: data/lfw/manifest.json
+  sample_ratio_overrides:
+    val: 0.1
+  sample_seed: 42
+
+model:
+  type: UNetFaceSwap
+  channels: 64
+
+loss:
+  type: FaceSwapLoss
+
+eval:
+  batch_size: 2
+  num_workers: 0
+  pin_memory: false
+  log_interval: 10
+  checkpoint: work_dirs/face_swap/lfw-unet-baseline-001/checkpoints/epoch_01.pt
+
+runner:
+  type: BaseRunner

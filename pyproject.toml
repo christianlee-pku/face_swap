@@ -1,0 +1,18 @@
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["work_dirs", "data", ".venv", "venv"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+exclude = ["work_dirs", "data", ".venv", "venv"]
+warn_unused_configs = true
+
+[project.optional-dependencies]
+retinaface = ["retinaface>=0.0.13"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

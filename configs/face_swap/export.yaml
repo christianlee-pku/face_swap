@@ -1,0 +1,16 @@
+name: lfw-unet-export-001
+seed: 42
+
+model:
+  type: UNetFaceSwap
+  channels: 64
+
+export:
+  checkpoint: work_dirs/face_swap/lfw-unet-baseline-001/checkpoints/epoch_01.pt
+  export_dir: work_dirs/exports/lfw-unet-baseline-001
+  format: onnx  # placeholder; extend to trt/ort as needed
+  opset: 14
+  input_size: [1, 3, 160, 160]
+
+runner:
+  type: BaseRunner

@@ -1,0 +1,8 @@
+download: false
+dataset: ashishpatel26/lfw-dataset
+raw_dir: data/lfw/raw
+proc_dir: data/lfw/processed
+manifest: data/lfw/manifest.json
+train_ratio: 0.8
+val_ratio: 0.1
+version: 1.0.0

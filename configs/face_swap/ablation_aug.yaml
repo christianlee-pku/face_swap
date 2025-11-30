@@ -1,0 +1,21 @@
+name: lfw-unet-ablation-aug
+seed: 42
+
+dataset:
+  type: LFWDataset
+  root: data/lfw/processed
+  split: train
+  manifest: data/lfw/manifest.json
+  augmentations:
+    - type: LightAugmentation
+      seed: 123
+
+model:
+  type: UNetFaceSwap
+  channels: 64
+
+loss:
+  type: FaceSwapLoss
+
+runner:
+  type: BaseRunner
