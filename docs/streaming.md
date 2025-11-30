@@ -26,11 +26,6 @@ curl -X POST http://localhost:8000/face-swap/stream \
   -d '{"config": "configs/face_swap/baseline.yaml", "frames": ["frame1.png", "frame2.png"]}'
 ```
 
-Reports:
-```bash
-curl http://localhost:8000/reports/work_dirs/lfw-unet-baseline-<ts>
-```
-
 ## Hardening Steps
 
 - Add real video frame ingestion (decode, resize, align) and temporal smoothing.

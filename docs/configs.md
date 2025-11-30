@@ -23,7 +23,7 @@
 
 ## Reproducibility
 
-- `seed` set; `config.snapshot.json` and `env.hash` saved to work_dir.
+- Set `seed`; work_dirs keep `config.yaml`/`config.py`, metrics, and checkpoints.
 
 ## Adding New Configs
 

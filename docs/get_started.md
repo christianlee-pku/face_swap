@@ -14,51 +14,36 @@
 
 ## Dataset (LFW)
 
-1) Download/prepare LFW via config or flags:
+1) Download/prepare via config:
    ```bash
    # Requires Kaggle CLI with KAGGLE_USERNAME/KAGGLE_KEY set
-   PYTHONPATH=src python -m interfaces.cli prepare-data --config configs/face_swap/data_prepare.yaml
+   bash scripts/prepare_data.sh
    ```
-   - Ingests `pairs.txt` and `pairs_01~pairs_10.txt`, preserves folder structure, and uses MTCNN alignment; if no face is detected, the raw image is copied into `data/lfw/processed` to keep manifests consistent.
-2) Align and build manifest (already included when using --download; rerun if needed):
+   - Ingests `pairs.txt` and `pairs_01~pairs_10.txt`, preserves folder structure, uses MTCNN alignment; if no face is detected, the raw image is copied into `data/lfw/processed`.
+2) Validate manifest/checksums:
    ```bash
-   PYTHONPATH=src python -m interfaces.cli prepare-data --config configs/face_swap/data_prepare.yaml
-   ```
-3) Validate manifest/checksums:
-   ```bash
-   PYTHONPATH=src python -m interfaces.cli validate-manifest --manifest data/lfw/manifest.json --processed-dir data/lfw/processed
+   bash scripts/validate_manifest.sh
    ```
 
 ## Train & Eval
 
-```bash
-python -m interfaces.cli train --config configs/face_swap/baseline.yaml --work-dir work_dirs/lfw-unet-baseline-$(date +%s)
-python -m interfaces.cli eval  --config configs/face_swap/eval.yaml     --work-dir work_dirs/lfw-unet-eval-$(date +%s)
-```
-- Outputs: `config.snapshot.json`, `env.hash`, metrics JSON/CSV, checkpoints, sample visuals (when available), README.
+- Train: `bash scripts/train.sh` (baseline config)
+- Eval: `bash scripts/eval.sh` (eval config)
+- Outputs: `config.yaml`, `config.py`, logs, `metrics.train.json`, checkpoints.
 
 ## Inference (Batch)
 
-```bash
-python -m interfaces.cli infer \
-  --config configs/face_swap/baseline.yaml \
-  --sources path/to/source.jpg \
-  --targets path/to/target.jpg \
-  --output-dir work_dirs/infer-samples
-```
+- `bash scripts/infer.sh` (uses `configs/face_swap/infer.yaml` for sources/targets/output_dir/checkpoint)
 
 ## Export & Edge Benchmark
 
-See `docs/export_edge.md` for full flow; quick commands:
-```bash
-python -m interfaces.cli export --config configs/face_swap/baseline.yaml --checkpoint work_dirs/.../checkpoints/best.pth --export-dir work_dirs/exports/baseline
-python -m interfaces.cli benchmark-edge --config configs/face_swap/export_edge.yaml --checkpoint work_dirs/.../checkpoints/best.pth --export-dir work_dirs/exports/baseline --target jetson
-```
+- ONNX: `bash scripts/export.sh` (uses `configs/face_swap/export.yaml`)
+- TensorRT: `bash scripts/trt.sh` (uses `configs/face_swap/trt.yaml`; requires trtexec)
+- Benchmark: `bash scripts/benchmark_edge.sh` (uses `configs/face_swap/export.yaml`)
 
 ## REST (Optional)
 
-- Routes: `/face-swap/batch`, `/face-swap/train`, `/face-swap/eval`, `/face-swap/stream`, `/reports/{run_id}`.
-- Contracts: `specs/001-face-swap-spec/contracts/`.
+- Routes: `/face-swap/batch`, `/face-swap/train`, `/face-swap/eval`, `/face-swap/stream`, `/reports/{run_id}` (placeholder status; see `src/interfaces/rest.py`).
 
 ## Notes
 

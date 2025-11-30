@@ -9,7 +9,7 @@
 - Expected raw layout: `data/lfw/raw/<person>/<image>.jpg` plus `pairs.txt` and `pairs_01~pairs_10.txt` (pairs are ingested into the manifest).
 - Kaggle download: use Kaggle API to fetch LFW into `data/lfw/raw/`; handle auth/token. Command (config-driven):
   ```bash
-  PYTHONPATH=src python -m interfaces.cli prepare-data --config configs/face_swap/data_prepare.yaml
+  bash scripts/prepare_data.sh
   ```
 - Structure is preserved: aligned outputs go to `data/lfw/processed/<person>/<image>.jpg`.
 - Detection/alignment: MTCNN (RetinaFace disabled); crops at MTCNN default size (160); if detection fails, the raw image is copied to processed; checksums captured in manifest.
@@ -29,6 +29,6 @@
 
 - Run validation:
   ```bash
-  PYTHONPATH=src python -m interfaces.cli validate-manifest --manifest data/lfw/manifest.json --processed-dir data/lfw/processed
+  bash scripts/validate_manifest.sh
   ```
 - Ensure aligned images exist at `data/lfw/processed/` paths referenced in manifest; fix or regenerate if missing.

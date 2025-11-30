@@ -14,18 +14,14 @@
 ## ONNX Export
 
 ```bash
-python -m interfaces.cli export \
-  --config configs/face_swap/baseline.yaml \
-  --checkpoint work_dirs/.../checkpoints/best.pth \
-  --export-dir work_dirs/exports/baseline
+bash scripts/export.sh                # uses configs/face_swap/export.yaml
 ```
-- Uses torch.onnx.export when available; falls back to placeholder if missing deps.
-- Output: `model.onnx` in export_dir.
+- Output: `model.onnx` in export_dir (fails if torch/onnx missing or checkpoint mismatch).
 
 ## TensorRT Conversion
 
-- Conversion invoked via `trtexec` in `exporters/tensorrt_exporter.py` (FP16 by default).
-- Output: `model.fp16.engine` (placeholder if trtexec missing).
+- Conversion invoked via `trtexec` (config: configs/face_swap/trt.yaml, script: bash scripts/trt.sh).
+- Output: `model.trt` (fails if trtexec missing).
 
 ## ONNX Runtime Validation
 
@@ -35,17 +31,13 @@ python -m interfaces.cli export \
 ## Edge Benchmark
 
 ```bash
-python -m interfaces.cli benchmark-edge \
-  --config configs/face_swap/export_edge.yaml \
-  --checkpoint work_dirs/.../checkpoints/best.pth \
-  --export-dir work_dirs/exports/baseline \
-  --target jetson
+bash scripts/benchmark_edge.sh    # uses configs/face_swap/export.yaml by default
 ```
 - Records latency/FPS to `benchmark.json`. Current latency/FPS uses perf hooks; replace with real device measurements.
 
 ## Packaging
 
-- Include: `model.onnx`, `model.fp16.engine` (if built), `benchmark.json`, sample commands, config snapshot, env hash.
+- Include: `model.onnx`, `model.trt` (if built), `benchmark.json`, sample commands.
 - Document device assumptions (Jetson Orin/Xavier, FP16).
 
 ## Hardening Notes
